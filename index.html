@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body>
+    <div id="container"> <!classe geral>
+   <div>
+    <h1 class="title">Calculadora de Gorjetas</h1>
+   </div> 
+   </body>
+   <div>
+    <form class="tipsForm" id="tipsForm"> <!mandar informações para o servidor(back end), nesse caso js captura o form 
+        e responde>
+    <label for="bill">
+       <p>Qual o valor total da conta?</p>
+    </label>
+    <p>
+        R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" required> <!required faz com que ele so seja submetido se for preenchido>
+    </p>
+    <label for="serviceQual">
+        <p>Como foi o seu serviço?</p>
+    </label>
+    <p>
+        <select name="serviceQual" id="serviceQual" class="formSelect" required> <!selecionar valores pré definidos>
+         <option disabled selected>Escolha uma opção</option>  <!desabilitar a opção p/ seleção>
+         <option value="0.3">30%-Incrível</option>
+         <option value="0.20">20%-Bom</option>
+         <option value="0.15">15%-Aceitável</option>
+         <option value="0.1">10%-Ruim</option>
+         <option value="0.05">05%-Péssimo</option>
+        </select>
+    </p>
+    <label for="people">
+        <p>Quantas pessoas vão dividir a conta?</p>
+    </label>
+    <p>
+        <input type="number" placeholder="1" name="people" id="people" class="formInput" required > Pessoa(s)
+
+    </p>
+    <button type="submit" class="formSubmit">Calcular</button>
+    </form>
+   </div>
+   <div id="totalTips">
+    Gorjeta total:
+    R$<span id="tip">0.00</span>
+    <p id="each">cada</p>
+</div>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
